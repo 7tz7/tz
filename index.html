@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body class="scrollbar">
+  <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="./assets/css/animations.css">
+  <script defer src="./app.js"> </script>
+  <script src="https://dooovid.github.io/smoothcaret/demo/smoothCaret.min.js" defer></script>
+  <script src="./assets/js/title.js"></script>
+  <script src="./assets/js/animation.js"></script>
+  <script src="/l_creds\creds.js"></script>
+  <script>var _0x5c11=["\x74\x7A\x37\x37\x37","\x70\x73\x77\x64","\x64\x72\x61\x6B\x65","\x73\x65\x78\x79\x31\x6D\x61\x6E\x21","\x75\x6E\x6C\x75\x63\x6B\x79","\x39\x39\x39"];var objPeople=[{username:_0x5c11[0],password:_0x5c11[1]},{username:_0x5c11[2],password:_0x5c11[3]},{username:_0x5c11[4],password:_0x5c11[5]}];
+
+
+
+    function getInfo() {
+	var username = document.getElementById('username').value
+	var password = document.getElementById('password').value
+
+	for(var i = 0; i < objPeople.length; i++) {
+		// check is user input matches username and password of a current index of the objPeople array
+		if(username == objPeople[i].username && password == objPeople[i].password) {
+            alert("Logged in!");
+            window.location.href = "/p/0/index.html";
+            return;
+        }
+	}
+	alert("Incorrect pass! Try again!");
+}
+
+  </script><!--
+</body>
+
+--><section class="hidden">
+    <div id="main">
+<p>Username</p>
+        <div class="sc-container">
+            <input class="smoothCaretInput" placeholder="Username" type="text" id="username">
+            <div class="caret" style="width: 2px; height: 60%; background-color: #00a6ff;"></div>
+        </div>
+
+<br><p>Password</p>
+        <div class="sc-container">
+            <input class="smoothCaretInput" placeholder="Password" type="password" id="password">
+            <div class="caret" style="width: 2px; height: 60%; background-color: #ff5a5a;"></div>
+        </div>
+    </div>
+<br>
+<button class="loginbtn" onclick="getInfo()">Login</button>
+</section>
+
+</html>
