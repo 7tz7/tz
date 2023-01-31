@@ -12,6 +12,13 @@ body {
   display: none;
 }
 
+
+a {
+  font-size: 25px;
+  text-decoration: none; 
+  color:white;
+}
+
 small {
   font-size: 10px;
 }
@@ -52,5 +59,28 @@ section {
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 100vh;
+  min-height: 100vh;1
+}
+
+input {
+  background-color: #313131;
+  font-family: 'Poppins', 'Sans Serif';
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 25px;
+  color: white;
+  margin: 0%;
+  border-radius: 3px;
+}
+
+.loginbtn {
+  width: 50px;
+  height: 30px;
+  background-color: #5d54ff;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 4px;
+  
 }

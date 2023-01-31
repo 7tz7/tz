@@ -1,0 +1,49 @@
+  var userPass = [{
+		username: "unlucky",
+		password: "damned"
+},{
+		username: "drake",
+		password: "sexy1man!"
+},{
+		username: "bog",
+		password: "c00lest"
+},{
+		username: "wrld",
+		password: "dripped1out!"
+},{
+		username: "tz",
+		password: "$unlucky"
+},{
+    username: "user",
+		password: "$dummypassword"
+}]
+
+    function getLogin() {
+	var username = document.getElementById('username').value
+	var password = document.getElementById('password').value
+
+	for(var i = 0; i < userPass.length; i++) {
+		// check is user input matches username and password of a current index of the userPass array
+		if(username == userPass[i].username && password == userPass[i].password) {
+Swal.fire({
+  title: '🎉 Logged In! 🎉',
+  text: " Welcome! ",
+  icon: 'success',
+  confirmButtonColor: '#28e02b',
+  confirmButtonText: 'Okay!',
+  footer: 'If there is an error, <a style="color: black; text-decorations: none;" href="./p/faq/index.html">click here</a>'
+}).then((result) => {
+  window.location.href = "./p/0/index.html";
+})
+			return
+		}
+	}
+  Swal.fire({
+  title: '❌ Error! ❌',
+  text: " Incorrect username or password! Try again! ",
+  icon: 'error',
+  confirmButtonColor: '#28e02b',
+  confirmButtonText: 'Okay!',
+  footer: 'If you think something is wrong, <a style="color: black; text-decorations: none;" href="./p/login_err/index.html">click here</a>.'
+})
+}

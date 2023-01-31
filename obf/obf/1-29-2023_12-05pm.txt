@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loading...</title>
+</head>
+
+<body class="scrollbar" onload="setTimeout('redirect()', 300)">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="./assets/js/app.js"> </script>
+  <script defer src="./assets/js/smoothCaret.min.js/"></script>
+  <script src="./assets/js/title.js"></script>
+  <script src="./assets/js/animation.js"></script>
+  <script src="./l_creds/creds.js"></script>
+  <script src="./assets/js/swal.js/"></script>
+  <script src="./assets/js/mobile.js"></script>
+
+<script>
+  var userPass = [{
+		username: "unlucky",
+		password: "damned"
+},{
+		username: "drake",
+		password: "sexy1man!"
+},{
+		username: "bog",
+		password: "c00lest"
+},{
+		username: "wrld",
+		password: "dripped1out!"
+},{
+		username: "tz",
+		password: "$unlucky"
+},{
+    username: "user",
+		password: "$dummypassword"
+}]
+
+    function getLogin() {
+	var username = document.getElementById('username').value
+	var password = document.getElementById('password').value
+
+	for(var i = 0; i < userPass.length; i++) {
+		// check is user input matches username and password of a current index of the userPass array
+		if(username == userPass[i].username && password == userPass[i].password) {
+Swal.fire({
+  title: '🎉 Logged In! 🎉',
+  text: " Welcome! ",
+  icon: 'success',
+  confirmButtonColor: '#28e02b',
+  confirmButtonText: 'Okay!',
+  footer: 'If there is an error, <a style="color: black; text-decorations: none;" href="./p/faq/index.html">click here</a>'
+}).then((result) => {
+  window.location.href = "./p/0/index.html";
+})
+			return
+		}
+	}
+  Swal.fire({
+  title: '❌ Error! ❌',
+  text: " Incorrect username or password! Try again! ",
+  icon: 'error',
+  confirmButtonColor: '#28e02b',
+  confirmButtonText: 'Okay!',
+  footer: 'If you think something is wrong, <a style="color: black; text-decorations: none;" href="./p/login_err/index.html">click here</a>.'
+})
+}
+  </script>
+</body>
+
+<section class="hidden">
+  <div id="main">
+    <div style="animation: infinite 7s space3 ease; border-radius: 9px; transform: 4px;">
+      <p style="user-select: none;">Username</p>
+    </div>
+    <div class="sc-container" style="animation: infinite 7s space3 ease; border-radius: 9px; transform: 4px;">
+      <input class="smoothCaretInput" placeholder="Username" type="text" id="username" style="user-select: none;">
+      <div class="caret" style="width: 2px; height: 60%; background-color: #00a6ff;"></div>
+    </div>
+
+    <br style="user-select: none;">
+    <div style="animation: infinite 7s space3 ease; border-radius: 9px; transform: 4px;">
+      <p style="user-select: none;">Password</p>
+    </div>
+    <div class="sc-container" style="animation: infinite 7s space3 ease; border-radius: 9px; transform: 4px;">
+      <input class="smoothCaretInput" placeholder="Password" type="password" id="password" style="user-select: none;">
+      <div class="caret" style="width: 2px; height: 60%; background-color: #ff5a5a;"></div>
+    </div>
+  </div>
+  <br style="user-select: none;">
+    <button style="user-select: none;" class="loginbtn" onclick="getLogin()">Login</button>
+  </div>
+</section>
+
+</html>

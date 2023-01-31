@@ -1,0 +1,3 @@
+    <a target="_blank" href="code.txt" download style="animation: infinite 2.2s space ease;" class="fa-solid fa-code"></a>
+
+icon link to code.txt with animation
